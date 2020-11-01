@@ -12,6 +12,7 @@ body
 {
   display: block;
   position: relative;
+  width: 80%;
   top: 50px;
   left: 50px;
   
@@ -105,22 +106,26 @@ body
   position: absolute;
   width: 100%;
   margin: -100px 0 0 -50px;
-  padding: 50px;
+  padding: 25px;
   padding-top: 125px;
   
   background: #ededed;
-  list-style-type: none;
   -webkit-font-smoothing: antialiased;
   
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  height: 100vh;
+  height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-#menu.giphy-icon {
-    margin-bottom: 2%;
+#menu ul 
+{
+    list-style-type: none;
 }
 
 #menu li
@@ -129,7 +134,18 @@ body
   font-size: 22px;
 }
 
-#menuToggle input:checked ~ ul
+.powered-by-giphy-container 
+{
+    display: flex;
+    justify-content: center;
+}
+
+#menuToggle input:checked ~ div
 {
   transform: none;
+}
+
+#menu img.personal-logo 
+{
+    height: 50px; 
 }
