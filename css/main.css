@@ -1,13 +1,11 @@
-/* Home page. First section */
+/* Home page. Header and first section */
 
 #front-logo 
 {
     height: 50px;
 }
 
-/*Home page. Second section */
-
-url("http://digital.bnint.com/filelib/s9/photos/white_wood_4500x3000_lo_res.jpg");
+/*Home page. Second section (carousel) */
 
 .carousel {
     position: relative;
