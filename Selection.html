@@ -45,18 +45,57 @@
   
           </div>
         </nav>
-  
+
+        <section id="search-bar">
+
+            <form class="search-bar-form" onsubmit="event.preventDefault();" role="search">
+                <label for="search"></label>
+                <input id="search" type="search" placeholder="Search..." autofocus required />
+                <button type="submit">Go</button>    
+            </form>
+            <form>
+                <button type="submit">Work</button> 
+            </form>
+            <form>
+                <button type="submit">Family</button>
+            </form>
+            <form>
+                <button type="submit">Friends</button>
+            </form>
+            <form>
+                <button type="submit">Sports</button>
+            </form>
+        </section>
+
     </header>
-    <main>
-      <div class="container">
 
+        <section>
+            <!-- Load Font Awesome Icon Library -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <section class="pokemon-list"></section>
+            <div class="row">
+                <div class="column" style="background-color:#aaa;">
+                    <h2>Column 1</h2>
+                        <p>Some text..</p>
+                </div>
+                <div class="column" style="background-color:#bbb;">
+                <h2>Column 2</h2>
+                    <p>Some text..</p>
+                </div>
+            </div>
 
-
-        
-      </div>
-    </main>
+            <div class="row">
+                <div class="column" style="background-color:#ccc;">
+                    <h2>Column 3</h2>
+                        <p>Some text..</p>
+                </div>
+                <div class="column" style="background-color:#ddd;">
+                    <h2>Column 4</h2>
+                        <p>Some text..</p>
+                </div>
+            </div>
+        </section>
+  
     <script src="./scripts/GiphyAPI.js"></script>
   </body>
 </html>

@@ -1,11 +1,46 @@
+body
+{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav
+{
+  height: 18vh;
+}
 /* Home page. Header and first section */
 
-#front-logo 
+#gifstories-presentation
 {
-    height: 50px;
+  padding: 10%;
+  background: cadetblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#front-logo {
+  height: 70px;
+}
+
+#gifstories-presentation h2, #gifstories-presentation p
+{
+  text-align: center;
 }
 
 /*Home page. Second section (carousel) */
+
+#trending-gifs {
+  padding: 10%;
+}
+
+#trending-gifs h2 
+{
+  text-align: center
+}
 
 .carousel {
     position: relative;
@@ -33,8 +68,8 @@
 
 .carousel-item img {
     display: block;
-    height: auto;
-    max-width: 100%;
+    height: 50vh;
+    width: 100%;
 }
 
 .carousel-control {
@@ -123,75 +158,137 @@
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
 }
 
+ 
+
+.footer 
+{
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #bababa;
+  }
+  .footer ul 
+  {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+  }
+  .footer ul li a {
+    text-decoration: none;
+    color: #bababa;
+  }
+  .footer ul li a i.fa 
+  {
+    padding: 10px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 5px 0 5px;
+    border-radius: 50%;
+  }
+
+  .footer ul li a i.fa:hover 
+  {
+    opacity: 0.7;
+  }
+
+.footer ul li a i.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.footer ul li a i.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.footer ul li a i.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.footer ul li a i.fa-instagram {
+  background: #f00874;
+  color: white;
+}
+
+.footer p {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 0;
+}
 
 
-/*  
+ /*Selection page. Search bar */
+ :root {
+    --rad: .7rem;
+    --dur: .3s;
+    --color-dark: #2f2f2f;
+    --color-light: #fff;
+    --color-brand: #57bd84;
+    --font-fam: 'Lato', sans-serif;
+    --height: 5rem;
+    --btn-width: 6rem;
+    --bez: cubic-bezier(0, 0, 0.43, 1.49);
+  }
 
-footer {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-    .social-media-links {
-		background: rgb(95, 88, 88);
-		overflow: hidden;
-		padding-bottom: 4px;
-		text-align: center;
-		ul {
-			margin: 0;
-			padding: 0;
-		}
-		li {
-			display: inline;
-			margin: 0;
-			padding: 0;
-		}
-		a {
-			border-bottom: 0px solid rgba(0,0,0,0.95);
-			border-radius: 4px;
-			box-shadow: inset 0 -3px 0 0 rgba(0,0,0,0), 0 6px 8px rgba(0,0,0,0), 0 24px 24px rgba(0,0,0,0), 0 36px 36px rgba(0,0,0,0), 0 64px 64px rgba(0,0,0,0), 0 64px 128px rgba(0,0,0,0), 0 120px 0 rgba(0,0,0,0), 0 86px 8px 6px rgba(0,0,0,0),;
-			display: inline-block;
-      height: 30px;
-			padding: 20px;
-			position: relative;
-			transition: .2s ease-in;
-      width: 30px;
-			svg {
-        left: 20px;
+  #search-bar 
+  {
+    form {
+        position: relative;
+        width: 30rem;
+        background: var(--color-brand);
+        border-radius: var(--rad);
+      }
+      input, button {
+        height: var(--height);
+        font-family: var(--font-fam);
+        border: 0;
+        color: var(--color-dark);
+        font-size: 1.8rem;
+      }
+      input[type="search"] {
+        outline: 0; // <-- shold probably remove this for better accessibility, adding for demo aesthetics for now.
+        width: 100%;
+        background: var(--color-light);
+        padding: 0 1.6rem;
+        border-radius: var(--rad);
+        appearance: none; //for iOS input[type="search"] roundedness issue. border-radius alone doesn't work
+        transition: all var(--dur) var(--bez);
+        transition-property: width, border-radius;
+        z-index: 1;
+        position: relative;
+      }
+      button {
+        display: none; // prevent being able to tab to it
         position: absolute;
-        top: 20px;
-				height: 30px;
-				width: 30px;
-        &.glow {
-          path, circle {
-            fill: rgba(0,0,0,0);
-          }
+        top: 0;
+        right: 0;
+        width: var(--btn-width);
+        font-weight: bold;
+        background: var(--color-brand);
+        border-radius: 0 var(--rad) var(--rad) 0;
+      }
+      input:not(:placeholder-shown) {
+        border-radius: var(--rad) 0 0 var(--rad);
+        width: calc(100% - var(--btn-width));
+        + button {
+          display: block;
         }
-				path, circle {
-					fill: rgb(0,128,128);
-					transition: .2s ease-in;
-				}
-			}
-		}
-		a:hover {
-			transform: translateY(-4px);
-			box-shadow: inset 0 -3px 0 0 rgba(0,0,0,0.1), 0 6px 8px rgba(0,0,0,0.05), 0 24px 24px rgba(0,0,0,0.05), 0 36px 36px rgba(0,0,0,0.05), 0 64px 64px rgba(0,0,0,0.15), 0 64px 128px rgba(0,0,0,0.15), 0 86px 8px 6px fadeout(rgb(0, 84, 180), 75), 0 83px 4px 0px fadeout(rgb(0, 84, 180), 5);
-			svg {
-        &.glow {
-          filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><f…ter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
-          filter: blur(2px);
-          path, circle {
-            fill: fadeout(rgb(0, 84, 180), 40);
-          }
-        }
-				path, circle {
-					fill: rgb(0, 84, 180);
-				}
-			}
-		}
-    } 
- */
-
+      }
+      label {
+        position: absolute;
+        clip: rect(1px, 1px, 1px, 1px);
+        padding: 0;
+        border: 0;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+      }
+  }
+  
+  
 
 
 
