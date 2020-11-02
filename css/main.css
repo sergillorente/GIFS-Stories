@@ -15,7 +15,7 @@ nav
 
 #gifstories-presentation
 {
-  padding: 10%;
+  padding: 14%;
   background: cadetblue;
   display: flex;
   flex-direction: column;
@@ -29,6 +29,17 @@ nav
 #gifstories-presentation h2, #gifstories-presentation p
 {
   text-align: center;
+}
+
+h2.laugh-tittle 
+{
+  font-size: 1.2em;
+    color: white;
+}
+
+p.curiosity-text 
+{
+  color: white;
 }
 
 /*Home page. Second section (carousel) */
