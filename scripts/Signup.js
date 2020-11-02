@@ -1,1 +1,1 @@
-console.log("dSignup")
+'use strict';

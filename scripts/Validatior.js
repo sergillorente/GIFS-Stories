@@ -1,1 +1,1 @@
-console.log("validator")
+'use strict'

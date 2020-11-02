@@ -1,1 +1,1 @@
-console.log("database")
+'use strict'

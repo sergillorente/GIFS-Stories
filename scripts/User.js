@@ -1,1 +1,1 @@
-console.log("User")
+'use strict'

@@ -1,1 +1,1 @@
-console.log("Giphy")
+'use strict'
