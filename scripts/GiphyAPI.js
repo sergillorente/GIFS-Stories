@@ -6,20 +6,26 @@ const gifListContainer = document.querySelector('#gifs-list');
 
 const API_KEY = '9EQlIhW5n42ueK7Crl0DrCUllyxttvDQ';
 
-const trendingGifs = fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=3`)
+//trending gifs home page
+fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=3`)
   .then( (response) => {
     return response.json();  
   })
   .then((data) => {
     console.log('data', data)
-    return trendingGifs;
+    
+    data.data.forEach((gifObject) => {
+        const card = document.createElement('div')
+        card.classList.add("card")
+        card.innerHTML = `
+        <img width="100%" src=${gifObject.images.original.url} class="card-img-top" alt=${gifObject.title}>
+        <div class="card-body">
+            <h5 class="card-title">${gifObject.title}</h5>
+        </div> `; 
+        
+        gifTrendingListContainer.appendChild(card);
+    })
+
 })
 
-
-    // const article = document.createElement('article');
-    // article.innerHTML = `
-    //   <img src="${data.sprites.front_default}" />
-    //   <h3>${data.name}</h3>
-    // `
-
-    // pokemonList.appendChild(article);
+//search gifs for selection page

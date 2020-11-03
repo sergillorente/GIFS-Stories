@@ -40,9 +40,6 @@ class Signup {
       const password = event.target.value;
       const repeatPassword = this.repeatPasswordInput.value;
 
-      console.log(password)
-      console.log(repeatPassword)
-  
       validator.validatePassword(password);
       validator.validateRepeatPassword(password, repeatPassword);
   
