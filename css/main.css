@@ -94,6 +94,7 @@ p.curiosity-text
     text-decoration: none;
     margin: 0 5px 0 5px;
     border-radius: 50%;
+    box-sizing: content-box;
   }
 
   .footer ul li a i.fa:hover 

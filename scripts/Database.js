@@ -16,9 +16,10 @@ class Database {
     saveNewUser = (newUser) => {
       const usersArr = this.getAllUsers();
   
-      const updatedUsersArr = usersArr.push(newUser);
+      usersArr.push(newUser);
+
+      const updatedUsersStr = JSON.stringify(usersArr);
   
-      const updatedUsersStr = JSON.stringify(updatedUsersArr);
       localStorage.setItem("users", updatedUsersStr);
     };
   }

@@ -12,6 +12,15 @@ class Signup {
       this.buttonInput = document.querySelector("#signup-button");
       this.errorsWrapper = document.querySelector(".message-container");
     }
+
+
+    handleNameInput = (event) => {
+      const name = event.target.value;
+
+      validator.validateCorrectName(name);
+
+      this.setErrorMessages();
+    }
   
     handleEmailInput = (event) => {
       const email = event.target.value;
@@ -46,6 +55,10 @@ class Signup {
       this.setErrorMessages();
     };
   
+
+    enableSignupButton = () => {
+      this.buttonInput.disabled = false
+    }
   
   
     setErrorMessages = () => {
@@ -53,16 +66,19 @@ class Signup {
       this.errorsWrapper.innerHTML = "";
   
       const errorsObj = validator.getErrors();
-  
-      
+
       const errorStringsArr = Object.values( errorsObj );
-  
+
       errorStringsArr.forEach( (str) => {
         const p = document.createElement('p');
         p.textContent = str;
   
         this.errorsWrapper.appendChild(p);
       })
+
+      if (!errorStringsArr.length) {
+        this.enableSignupButton()
+      }
     }
   
     
@@ -87,6 +103,7 @@ class Signup {
 
 
     addListeners = () => {
+      this.nameInput.addEventListener("input", this.handleNameInput);
       this.emailInput.addEventListener("input", this.handleEmailInput);
       this.passwordInput.addEventListener("input", this.handlePasswordInput);
       this.repeatPasswordInput.addEventListener("input", this.handleRepeatPasswordInput);

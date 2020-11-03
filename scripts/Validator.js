@@ -2,6 +2,7 @@
 
 class Validator {
     constructor() {
+      this.invalidNameError = "Name is a required field";
       this.invalidEmailError = "Enter a valid email address";
       this.emailExistsError = "The entered email is being already used by another user.";
       this.passwordError = "Password must be at least 6 characters long";
@@ -9,6 +10,7 @@ class Validator {
   
   
       this.errors = {
+        invalidNameError: this.invalidNameError,
         invalidEmailError: this.invalidEmailError,
         emailExistsError: this.emailExistsError,
         passwordError: this.passwordError,
@@ -16,7 +18,15 @@ class Validator {
       };
     }
   
-  
+    validateCorrectName = (name) => {
+      if (name) {
+        delete this.errors.invalidNameError;
+      } else {
+        this.errors.invalidNameError = this.invalidNameError;
+      }
+    };
+
+
     validateValidEmail = (email) => {
       if (this.emailSyntaxIsValid(email)) {
         delete this.errors.invalidEmailError;
@@ -36,8 +46,8 @@ class Validator {
   
 
     validateUniqueEmail = (newEmail) => {
-      const users = db.getAllUsers(); //
-  
+      const users = db.getAllUsers();
+
       let isEmailUnique = true;
   
       users.forEach((userObj) => {
