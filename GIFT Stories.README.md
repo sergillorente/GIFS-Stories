@@ -1,6 +1,6 @@
 # GIFT Stories
 
-![Main frame picture](/Users/sergillorenteblasco/Desktop/Ironhack/Projects/Screenshot 2020-10-30 at 19.15.11.png)
+![Main frame picture](https://imgur.com/gallery/mku0E)
 
 ## Description
 

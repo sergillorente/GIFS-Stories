@@ -1,6 +1,5 @@
 'use strict';
 
-
 class Validator {
     constructor() {
       this.invalidEmailError = "Enter a valid email address";
@@ -11,6 +10,7 @@ class Validator {
   
       this.errors = {
         invalidEmailError: this.invalidEmailError,
+        emailExistsError: this.emailExistsError,
         passwordError: this.passwordError,
         repeatPasswordError: this.repeatPasswordError,
       };
@@ -38,15 +38,15 @@ class Validator {
     validateUniqueEmail = (newEmail) => {
       const users = db.getAllUsers(); //
   
-      let emailUnique = true;
+      let isEmailUnique = true;
   
       users.forEach((userObj) => {
         if (userObj.email === newEmail) {
-          emailUnique = false; 
+          isEmailUnique = false; 
         }
       });
   
-      if (emailUnique) {
+      if (isEmailUnique) {
         delete this.errors.emailExistsError;
       } else {
         this.errors.emailExistsError = this.emailExistsError;
@@ -54,7 +54,7 @@ class Validator {
     };
   
   
-  
+
     validatePassword = (password) => {
       if (password.length >= 6) {
         delete this.errors.passwordError;

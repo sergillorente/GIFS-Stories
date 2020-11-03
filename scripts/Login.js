@@ -1,5 +1,6 @@
 'use strict';
 
+
 class Login {
     constructor() {
       this.emailInput = document.querySelector("#email");

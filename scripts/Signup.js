@@ -1,5 +1,6 @@
 'use strict';
 
+
 class Signup {
     constructor() {
 
@@ -13,8 +14,7 @@ class Signup {
     }
   
     handleEmailInput = (event) => {
-      const emailInput = event.target;
-      const email = emailInput.value;
+      const email = event.target.value;
   
       validator.validateValidEmail(email);
       validator.validateUniqueEmail(email);
@@ -26,12 +26,9 @@ class Signup {
   
   
     handlePasswordInput = (event) => {
-      const passwordInput = event.target;
-      const repeatPasswordInput = this.repeatPasswordInput;
-  
-      const password = passwordInput.value;
-      const repeatPassword = repeatPasswordInput.value;
-  
+      const password = event.target.value;
+      const repeatPassword = this.repeatPasswordInput.value;
+
       validator.validatePassword(password);
       validator.validateRepeatPassword(password, repeatPassword);
   
@@ -40,11 +37,11 @@ class Signup {
   
   
     handleRepeatPasswordInput = (event) => {
-      const passwordInput = event.target;
-      const repeatPasswordInput = this.repeatPasswordInput;
-  
-      const password = passwordInput.value;
-      const repeatPassword = repeatPasswordInput.value;
+      const password = event.target.value;
+      const repeatPassword = this.repeatPasswordInput.value;
+
+      console.log(password)
+      console.log(repeatPassword)
   
       validator.validatePassword(password);
       validator.validateRepeatPassword(password, repeatPassword);
@@ -71,8 +68,7 @@ class Signup {
       })
     }
   
-  
-  
+    
   
     saveData = (event) => {
   
@@ -91,6 +87,8 @@ class Signup {
       this.passwordInput.value = "";
     };
   
+
+
     addListeners = () => {
       this.emailInput.addEventListener("input", this.handleEmailInput);
       this.passwordInput.addEventListener("input", this.handlePasswordInput);
