@@ -46,18 +46,17 @@ class Signup {
   
   
     handleRepeatPasswordInput = (event) => {
-      const password = event.target.value;
-      const repeatPassword = this.repeatPasswordInput.value;
+      const repeatPassword = event.target.value;
+      const password = this.passwordInput.value;
 
-      validator.validatePassword(password);
       validator.validateRepeatPassword(password, repeatPassword);
   
       this.setErrorMessages();
     };
   
 
-    enableSignupButton = () => {
-      this.buttonInput.disabled = false
+    toggleSignupButton = () => {
+      
     }
   
   
@@ -77,7 +76,9 @@ class Signup {
       })
 
       if (!errorStringsArr.length) {
-        this.enableSignupButton()
+        this.buttonInput.disabled = false;
+      } else {
+        this.buttonInput.disabled = true;
       }
     }
   
@@ -98,6 +99,7 @@ class Signup {
       this.nameInput.value = "";
       this.emailInput.value = "";
       this.passwordInput.value = "";
+      this.repeatPasswordInput.value = "";
     };
   
 
@@ -117,4 +119,4 @@ class Signup {
   
   
   
-  window.addEventListener('load', signup.addListeners )
+  window.addEventListener('load', signup.addListeners );

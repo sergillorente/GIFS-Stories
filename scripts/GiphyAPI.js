@@ -28,4 +28,10 @@ fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=3`)
 
 })
 
+
+for (let index = 1; index <= 18; index++) {
+
+  
+}
+
 //search gifs for selection page

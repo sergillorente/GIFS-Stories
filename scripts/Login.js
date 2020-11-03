@@ -2,23 +2,25 @@
 
 
 class Login {
-    constructor() {
-      this.emailInput = document.querySelector("#email");
-      this.passwordInput = document.querySelector("#password");
-      this.messageContainer = document.querySelector(".message-container");
-      this.loginButton = document.querySelector("#login-button");
-    }
+  constructor() {
+    this.emailInput = document.querySelector("#email");
+    this.passwordInput = document.querySelector("#password");
+    this.messageContainer = document.querySelector(".message-container");
+    this.loginButton = document.querySelector("#login-button");
+  }
 
-    handleSubmit = (event) => {
-        event.preventDefault();
+  handleSubmit = (event) => {
 
-    const email = this.emailInput.value;       
+    console.log('here')
+    event.preventDefault();
+
+    const email = this.emailInput.value;
     const password = this.passwordInput.value;
 
     const users = db.getAllUsers();
 
-    const user = users.find( function(userObj) {
-      if (userObj.email === email &&  userObj.password === password) {
+    const user = users.find(function (userObj) {
+      if (userObj.email === email && userObj.password === password) {
         return true;
       }
     })
@@ -30,7 +32,7 @@ class Login {
       p.textContent = "Email or password are incorrect!";
     }
     else {
-      p.textContent = `Hello and welcome${user.name}!`;
+      p.textContent = `Hello and welcome ${user.name}!`;
       p.classList.add('correct-message');
       this.redirect();
     }
@@ -41,11 +43,23 @@ class Login {
 
 
   redirect = () => {
-    setTimeout( function () {
-      location.assign("dashboard.html")
+    setTimeout(function () {
+      location.assign("selection.html")
     }, 2000)
+  }
 
-
+  addListeners = () => {
+    this.emailInput.addEventListener("input", this.handleSubmit);
+    this.passwordInput.addEventListener("input", this.handleSubmit);
+    this.loginButton.addEventListener("click", this.handleSubmit);
   }
 
 }
+
+const login = new Login();
+
+window.addEventListener('load', function () {
+
+  login.loginButton.addEventListener('click', login.handleSubmit );
+
+});
