@@ -1,162 +1,176 @@
-body
-{
+@media (min-width: 320px) {
+
+  body
+  {
     margin: 0;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-nav
-{
-  height: 18vh;
-}
+  }
+    
+  nav
+  {
+    height: 18vh;
+  }
 /* Home page. Header and first section */
 
-#gifstories-presentation
-{
-  padding: 14%;
-  background: cadetblue;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#front-logo {
-  height: 70px;
-}
-
-#gifstories-presentation h2, #gifstories-presentation p
-{
-  text-align: center;
-}
-
-h2.laugh-tittle 
-{
-  font-size: 1.2em;
-    color: white;
-}
-
-p.curiosity-text 
-{
-  color: white;
-}
-
-/*Home page. Second section */
-
-#trending-gifs {
-  padding: 10%;
-}
-
-#trending-gifs h2 
-{
-  text-align: center
-}
-
-#title {
-    width: 100%;
-    position: absolute;
-    padding: 0px;
-    margin: 0px auto;
-    text-align: center;
-    font-size: 27px;
-    color: rgba(255, 255, 255, 1);
-    font-family: 'Open Sans', sans-serif;
-    z-index: 9999;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
-}
-
- 
-
-.footer 
-{
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.85);
-    color: #bababa;
-  }
-  .footer ul 
+  #gifstories-presentation
   {
-    list-style-type: none;
+    padding: 14%;
+    background-image: url("./../images/Circus.jpg");
+    background-position: center center; 
+    background-size: 100% 100%;
+    opacity: 50%; 
     display: flex;
-    justify-content: center;
-    padding: 0px;
+    flex-direction: column;
+    align-items: center;
   }
-  .footer ul li a {
-    text-decoration: none;
-    color: #bababa;
+
+  #front-logo {
+    height: 70px;
   }
-  .footer ul li a i.fa 
+
+  #gifstories-presentation h2, #gifstories-presentation p
   {
-    padding: 10px;
-    font-size: 30px;
-    width: 30px;
     text-align: center;
-    text-decoration: none;
-    margin: 0 5px 0 5px;
-    border-radius: 50%;
-    box-sizing: content-box;
   }
 
-  .footer ul li a i.fa:hover 
+  h2.laugh-tittle 
   {
-    opacity: 0.7;
+    font-size: 1.2em;
+      color: white;
   }
 
-.footer ul li a i.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
+  p.curiosity-text 
+  {
+    color: white;
+  }
 
-.footer ul li a i.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
+  /*Home page. Second section */
 
-.footer ul li a i.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
+  #trending-gifs {
+    padding: 10%;
+  }
 
-.footer ul li a i.fa-instagram {
-  background: #f00874;
-  color: white;
-}
+  #trending-gifs h2 
+  {
+    text-align: center
+  }
 
-.footer p {
-  font-size: 12px;
-  text-align: center;
-  margin-bottom: 0;
-}
+  #title {
+      width: 100%;
+      position: absolute;
+      padding: 0px;
+      margin: 0px auto;
+      text-align: center;
+      font-size: 27px;
+      color: rgba(255, 255, 255, 1);
+      font-family: 'Open Sans', sans-serif;
+      z-index: 9999;
+      text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+  }
 
-
- /*Selection page */
   
-  #categories-button 
+
+  .footer 
+  {
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.85);
+      color: #bababa;
+    }
+    .footer ul 
+    {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      padding: 0px;
+    }
+    .footer ul li a {
+      text-decoration: none;
+      color: #bababa;
+    }
+    .footer ul li a i.fa 
+    {
+      padding: 10px;
+      font-size: 30px;
+      width: 30px;
+      text-align: center;
+      text-decoration: none;
+      margin: 0 5px 0 5px;
+      border-radius: 50%;
+      box-sizing: content-box;
+    }
+
+    .footer ul li a i.fa:hover 
+    {
+      opacity: 0.7;
+    }
+
+  .footer ul li a i.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .footer ul li a i.fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  .footer ul li a i.fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+
+  .footer ul li a i.fa-instagram {
+    background: #f00874;
+    color: white;
+  }
+
+  .footer p {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+
+  /*Selection page */
+    
+    header.smiley-face 
+    {
+    background-image: url("./../images/Smiley.jpg");
+    background-position: center center; 
+    background-size: 100% 100%;
+    }
+    .search-bar 
+    {
+    
+    }
+    /* it is not being applied since this doc
+    #grid.column
+    {
+      background-color:#ccc;
+    }
+
+  */
+  /* Add tittle customization */
+  section.login h2 
   {
 
   }
-  
-  /* it is not being applied since this doc
-  #grid.column
+  /* Modifies all the features of the login form */
+  .login-form  
   {
-    background-color:#ccc;
+
+  }
+  /* modifies the button inside the form */
+  #login-button 
+  {
+
   }
 
-*/
-/* Add tittle customization */
-section.login h2 
-{
 
-}
-/* Modifies all the features of the login form */
-.login-form  
-{
 
-}
-/* modifies the button inside the form */
-#login-button 
-{
-
-}
+  }
 
 
