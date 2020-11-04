@@ -14,8 +14,8 @@ if (gifTrendingListContainer) {
     console.log('data', data)
     
     data.data.forEach((gifObject) => {
-      const card = document.createElement('div')
-      card.classList.add("card")
+      const card = document.createElement('div');
+      card.classList.add("card");
       card.innerHTML = `
       <img width="100%" src=${gifObject.images.original.url} class="card-img-top" alt=${gifObject.title}>
       <div class="card-body">
@@ -37,20 +37,24 @@ if (gifListContainer) {
   const searchButton = document.querySelector('#search-button');
 
   const handleSearchBar = (event) => {
-    event.preventDefault();
+    if (event) {
+      event.preventDefault();
+    }
 
     const searchTerm = searchInput.value;
+
 
     fetch(`https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${searchTerm}&limit=18`)
     .then( (response) => {
       return response.json();  
     })
     .then((data) => {
-      console.log('data', data)
+      console.log('data', data);
 
+      gifListContainer.innerHTML = '';
       data.data.forEach((gifObject) => {
-        const card = document.createElement('div')
-        card.classList.add("card")
+        const card = document.createElement('div');
+        card.classList.add("card");
         card.innerHTML =  `
         <img width="100%" src=${gifObject.images.original.url} class="card-img-top" alt=${gifObject.title}>
         <div class="card-body">
@@ -60,13 +64,16 @@ if (gifListContainer) {
         gifListContainer.appendChild(card);
       })
     });
+
   }
 
-  const addListener = () => {
+  const onPageLoad = () => {
     searchButton.addEventListener('click', handleSearchBar);
+    handleSearchBar();
+    searchInput.value = '';
   }    
 
-  window.addEventListener('load', addListener );
+  window.addEventListener('load', onPageLoad );
 }
 
 

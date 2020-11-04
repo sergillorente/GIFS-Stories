@@ -3,7 +3,7 @@
   body
   {
     margin: 0;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -166,11 +166,12 @@
 
   /*Selection page */
     
-    header.smiley-face 
+    header.smiley-face::after
     {
-    background-image: url("./../images/Smiley.jpg");
     content: "";
+    background-image: url("./../images/Smile.png");
     background-position: center center; 
+    background-size: cover;
     opacity: 0.4;
     top: 0;
     left: 0;
@@ -181,12 +182,59 @@
     }
     .search-bar 
     {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10%;
     }
-    /* it is not being applied since this doc
-    #grid.column
+
+    #search-button 
     {
-      background-color:#ccc;
+    border-width: 3px;
+    border-color: tomato;
+    }
+  
+    section.list-info
+    {
+    background-color: rgb(255 245 122);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .gif-section-color
+    {
+    background-color:rgb(255 245 122);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    }
+    
+    #title-list
+    {
+    padding-top: 5%;
+    }
+    #text-list 
+    {
+   
+    }
+    #gifs-list 
+    {
+      display: flex;
+      padding: 4%;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    #gifs-list > div 
+    {
+    width: 300px;
+    margin: 2%;
+    border-radius: 0.25rem;
+    }
+    
+   
     }
 
   */
@@ -208,6 +256,6 @@
 
 
 
-  }
+
 
 
