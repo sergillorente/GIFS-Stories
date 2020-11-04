@@ -32,7 +32,7 @@ class Login {
       p.textContent = "Email or password are incorrect!";
     }
     else {
-      p.textContent = `Hello and welcome ${user.name}!`;
+      p.textContent = `Welcome back ${user.name}!`;
       p.classList.add('correct-message');
       this.redirect();
     }
