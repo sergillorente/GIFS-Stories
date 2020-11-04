@@ -17,13 +17,23 @@
 
   #gifstories-presentation
   {
-    padding: 14%;
-    background-image: url("./../images/soft-image.png");
-    background-position: center center; 
-    background-size: 100% 100%;
+    padding: 0px 15% 10% 15%;  
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  
+  #gifstories-presentation::after {
+    content: "";
+    background: url("./../images/Baloons.png");
+    background-position: center center; 
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
   }
 
   #front-logo {
@@ -50,7 +60,7 @@
 
   .trending-container
   {
-    background-color: rgb(244, 226, 94);
+    background-color: rgb(255 245 122);
   }
 
   #title-trending-gifs
@@ -58,12 +68,16 @@
     display: flex;
     flex-direction: unset;
     justify-content: center;
-    color: red;
+    color: black;
+    margin: 8%;
 
   }
   #trending-gifs {
     display: flex;
-    padding: 10%;
+    padding: 4%;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
 
@@ -78,6 +92,13 @@
       font-family: 'Open Sans', sans-serif;
       z-index: 9999;
       text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+  }
+
+  .card 
+  {
+    width: 300px;
+    margin: 2%;
+    border-radius: 0.25rem;
   }
 
   
@@ -148,8 +169,15 @@
     header.smiley-face 
     {
     background-image: url("./../images/Smiley.jpg");
+    content: "";
     background-position: center center; 
-    background-size: 100% 100%;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;  
     }
     .search-bar 
     {
