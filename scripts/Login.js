@@ -5,7 +5,7 @@ class Login {
   constructor() {
     this.emailInput = document.querySelector("#email");
     this.passwordInput = document.querySelector("#password");
-    this.messageContainer = document.querySelector(".message-container");
+    this.messageContainer = document.querySelector(".message-container-login");
     this.loginButton = document.querySelector("#login-button");
   }
 
@@ -34,7 +34,7 @@ class Login {
     else {
       p.textContent = `Welcome back ${user.name}!`;
       p.classList.add('correct-message');
-      this.redirect();
+      // this.redirect();
     }
 
     this.messageContainer.appendChild(p);
