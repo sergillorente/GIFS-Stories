@@ -237,7 +237,7 @@
     z-index: -1; 
     } 
 
-  #signup-title
+  #login-title
   {
   font-size: 3.5rem;
   }
@@ -315,6 +315,11 @@
     bottom: 0;
     right: 0;
     z-index: -1; 
+  }
+
+  #signup-title
+  {
+    font-size: 3.5rem;
   }
 
   main.main-signup

@@ -58,16 +58,17 @@ The **MVP** includes:
 
     - main.css
     - burger-menu-icon.css
+  
+  - **scripts/**
 
-    - **scripts/**
-      - Database.js
-      - GiphyAPI.js
-      - Login.js
-      - Signup.js
-      - User.js
-      - Validator.js
+    - Database.js
+    - GiphyAPI.js
+    - Login.js
+    - Signup.js
+    - User.js
+    - Validator.js
 
-  - **img/**
+- **img/**
 
 
 
