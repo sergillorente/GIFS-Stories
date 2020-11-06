@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GIFStories - Selection</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,600"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/burger-menu-icon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+    <header class="smile-face">
+
+        <nav role="navigation">
+          <div id="menuToggle">
+  
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span> </span>
+  
+            <div id="menu">
+              <ul >
+                <li>
+                  <img class="personal-logo" src="./images/gifstories.png"/>
+                </li>
+                <a href="./index.html"><li>Home</li></a>
+                <a href="./selection.html"><li>Selection</li></a>
+                <a href="./login.html"><li>Log in</li></a>
+                <a href="./signup.html"><li>Sign up</li></a>
+              </ul>
+              <div class="powered-by-giphy-container">
+                <img src="../Giphy Attribution Marks/Static Logos/Small/Light Backgrounds/PoweredBy_200px-White_HorizLogo.png"/>
+              </div>
+              
+            </div>
+  
+          </div>
+        </nav>
+        <div class="search-bar">
+          <form>
+            <input type="text" id="search" value="welcome" placeholder="Search...">
+            <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+
+      </header>
+      
+      <main class="gif-section-color">
+            <h1 id="title-list">The List</h1>
+            <p id="text-list">Here is where you'll find the fun time you've been missing!</p>  
+
+            <div id="gifs-list"></div>
+      </main>
+
+        <footer class="footer">
+          <ul>
+            <li><a href="" target="_blank"><i class="fa fa-facebook fa-fw"></i></a></li>
+            <li><a href="" target="_blank"><i class="fa fa-instagram fa-fw"></i></a></li>
+            <li><a href="" target="_blank"><i class="fa fa-linkedin fa-fw"></i></a></li>
+            <li><a href="" target="_blank"><i class="fa fa-youtube fa-fw"></i></a></li>
+          </ul>
+          <p>GIFStories © 2020</p>
+        </footer>
+  
+    <script src="./scripts/giphyAPI.js"></script>
+  </body>
+</html>
