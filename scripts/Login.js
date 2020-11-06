@@ -11,7 +11,6 @@ class Login {
 
   handleSubmit = (event) => {
 
-    console.log('here')
     event.preventDefault();
 
     const email = this.emailInput.value;

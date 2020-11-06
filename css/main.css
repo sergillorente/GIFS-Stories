@@ -92,7 +92,7 @@
   .footer 
   {
       padding: 15px;
-      background-color: rgba(0, 0, 0, 0.85);
+      background-color: black;
       color: #bababa;
     }
     .footer ul 
@@ -237,6 +237,11 @@
     z-index: -1; 
     } 
 
+  #signup-title
+  {
+  font-size: 3.5rem;
+  }
+
   main.login-main
     {
     display: flex;
@@ -244,7 +249,7 @@
     flex-direction: column;
     text-align: center;
     flex-wrap: wrap;
-    height: 450px;
+    height: 515px;
     margin-top: 10%;
     }
 
@@ -276,7 +281,6 @@
     .message-container
     {
     width: 50%;
-    height: 27px;
     margin: 16px 25%;
     text-align: center;
     }
@@ -302,6 +306,15 @@
   body.signup-body
   {
     height: 1100px;
+    content: "";
+    background-image: url("./../images/Ducky.png");
+    background-position: center center; 
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1; 
   }
 
   main.main-signup
@@ -334,4 +347,6 @@ form.signup-form input
 {
   margin: 0% 25%;
 }
+
+Animation
 

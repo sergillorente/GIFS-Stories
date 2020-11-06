@@ -1,10 +1,10 @@
 # GIFT Stories
 
-![Main frame picture](https://imgur.com/gallery/mku0E)
+![Curiosity image](/Users/sergillorenteblasco/Desktop/Ironhack/Projects/M1/Curiosity.png)
 
 ## Description
 
-Are you exhausted, tired or burn out after a very looooong day? It's time for you to take it easy, relax and recharge your energy with **GIFTS Stories**. Laugh out loud when seeing possible past, present or future situations that you may live. An hilarious representation of how enjoyable can our life be! You can choose among 4 categories; *family*, *work*, *friends* and *sports*. Each one has its own story and customization. Sign up and be part of those who think that life it's a whole where funny moments are also essential :smile:.
+Are you exhausted, tired or burn out after a very looooong day? It's time for you to take it easy, relax and recharge your energy with **GIFTStories**. Laugh out loud when seeing possible past, present or future situations that you may live. An hilarious representation of how enjoyable can our life be! Be updated on what's going around and do it with GIFS! Sign up and be part of those who think that life it's a whole where funny moments are also essential :smile:.
 
 
 
@@ -14,11 +14,11 @@ The **MVP** includes:
 
 - **Homepage**: It will include the menu where you'll be able to navigate throught the other pages. As well, it will introduce the idea of this project as long as a brief introduction to the *GIFS* world. :keyboard:
 
-  - **Selection**: Over there is where the *Rock & Roll* begins. The 4 categories *family* :family:, *work* :hammer:, *friends* :popcorn: and *sports* :horse_racing:. Pick one and simply and enjoy. (You will find each category linked to the initial animation. The menu icon with its links which allow the easy navigation to the other pages.)
+  - **Selection**: Over there is where the *Rock & Roll* begins. The GIFS will welcome:handshake: you inmediatley. Use the search bar to navigate through the entire variety of GIFS the API Giphy provides.
 
   - **Sign up**: It's time to join the community and be part of those who think that there's more than hard work. :dancer: (A registration form composed by 4 gaps which need to be filled and that will serve as a recognition for further entries to this app.):registered:.
 
-  - **Log in**: Already on of us :vulcan_salute:! (A form where to access to your own profile. It needs the fulfillment of the email and its password.)
+  - **Log in**: Already one of us :vulcan_salute:! (A form where to access to your own profile. It needs the fulfillment of the email and its password.)
 
     
 
@@ -26,9 +26,11 @@ The **MVP** includes:
 
 - Another page where **FAQs** are the order of business :business_suit_levitating:. Increase the functionality among the 5 pages, faster interaction and an improvement on the visual aspects of the app.
 
-- An stricter validation process.
+- A log out process and an special set up once the user logs in.
 
-- A log out process.
+- Create more @media in the CSS main file to make it more responsive.
+
+- To add some animations and an improve design of the 5 pages.
 
   
 
@@ -42,7 +44,30 @@ The **MVP** includes:
 
 ## Data Structure
 
-To be defined.
+- **root/**
+
+  - index.html
+
+  - selection.html
+
+  - login.html
+
+  - signup.html
+
+  - **css/**
+
+    - main.css
+    - burger-menu-icon.css
+
+    - **scripts/**
+      - Database.js
+      - GiphyAPI.js
+      - Login.js
+      - Signup.js
+      - User.js
+      - Validator.js
+
+  - **img/**
 
 
 
@@ -58,7 +83,7 @@ Trello: [My Trello](https://trello.com/b/zNbGjLRL/project-1-gifts-stories) :cale
 
 GitHub: [My GitHub](https://github.com/sergillorente):telescope:. (Needs to be updated)
 
-Slides: 
+Slides: [My Slides](https://docs.google.com/presentation/d/17zTicVtTAubq9iPbVh8BLAPdA7fnDWkMdJckcWJPjmc/edit#slide=id.ga74cfa365a_0_6):cinema:.​
 
 
 
