@@ -91,6 +91,7 @@ class Signup {
       const name = this.nameInput.value;
       const email = this.emailInput.value;
       const password = this.passwordInput.value;
+
   
       const newUser = new User(name, email, password);
   
@@ -100,8 +101,14 @@ class Signup {
       this.emailInput.value = "";
       this.passwordInput.value = "";
       this.repeatPasswordInput.value = "";
+
     };
-  
+    
+    redirectLogin = () => {
+      setTimeout(function () {
+        location.assign("login.html")
+      }, 2000)
+    }
 
 
     addListeners = () => {
@@ -110,9 +117,10 @@ class Signup {
       this.passwordInput.addEventListener("input", this.handlePasswordInput);
       this.repeatPasswordInput.addEventListener("input", this.handleRepeatPasswordInput);
       this.buttonInput.addEventListener("click", this.saveData);
+      this.buttonInput.addListeners("click", this.redirectLogin);
     }
   
-  }
+}
   
   
   const signup = new Signup();

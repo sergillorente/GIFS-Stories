@@ -80,11 +80,11 @@ Checkout **GIPHY** :gift:
 
 ## Links
 
-Trello: [My Trello](https://trello.com/b/zNbGjLRL/project-1-gifts-stories) :calendar:. (Needs to be updated)
+Trello: [My Trello](https://trello.com/b/zNbGjLRL/project-1-gifts-stories) :calendar:. 
 
-GitHub: [My GitHub](https://github.com/sergillorente):telescope:. (Needs to be updated)
+GitHub: [My GitHub](https://sergillorente.github.io/GIFS-Stories/selection.html):telescope:.
 
-Slides: [My Slides](https://docs.google.com/presentation/d/17zTicVtTAubq9iPbVh8BLAPdA7fnDWkMdJckcWJPjmc/edit#slide=id.ga74cfa365a_0_6):cinema:.​
+Slides: [My Slides](https://docs.google.com/presentation/d/17zTicVtTAubq9iPbVh8BLAPdA7fnDWkMdJckcWJPjmc/edit#slide=id.ga74cfa365a_0_1):cinema:.
 
 
 
